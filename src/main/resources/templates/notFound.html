@@ -44,19 +44,8 @@
                 <th scope="col">Accions</th>
             </tr>
             </thead>
-            <tbody>
-            <tr th:each="sucursal: ${sucursals}">
-                <td th:text="${sucursal.pk_SucursalID}"></td>
-                <td th:text="${sucursal.nomSucursal}"></td>
-                <td th:text="${sucursal.paisSucursal}"></td>
-                <td th:text="${sucursal.tipusSucursal}"></td>
-                <td>
-                    <a th:href="@{/sucursal/update/{id}(id=${sucursal.pk_SucursalID})}" class="btn btn-info">Editar</a>
-                    <a th:href="@{/sucursal/delete/{id}(id=${sucursal.pk_SucursalID})}" class="btn btn-danger">Eliminar</a>
-                </td>
-            </tr>
-            </tbody>
         </table>
+        <p class="text-center" style="font-size: 1.5em; font-weight: bold; color: red">Aquesta sucursal no está registrada</p>
     </div>
 </body>
 </html>

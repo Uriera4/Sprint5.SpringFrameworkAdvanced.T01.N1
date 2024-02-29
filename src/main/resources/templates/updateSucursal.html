@@ -26,21 +26,22 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-                <h1 class="text-center">Registre de sucursal</h1>
+                <br>
+                <h1 class="text-center">Actualització de sucursal</h1>
                 <div class="card-body">
-                    <form th:action="@{/sucursal/add}" th:object="${sucursal}" method="POST">
+                    <form th:action="@{/sucursal/update/{id}(id=${sucursal.pk_SucursalID})}" th:object="${sucursal}" method="POST">
                         <div class="form-group">
                             <label>Nom: </label>
-                            <input type="text" name="nom" th:field="*{nomSucursal}" class="form-control" placeholder="Introdueixi el nom de la sucursal: " required>
+                            <input type="text" name="nom" th:field="*{nomSucursal}" class="form-control" placeholder="Actualitzi el nom de la sucursal: ">
                         </div>
                         <br>
                         <div class="form-group">
                             <label>Pais: </label>
-                            <input type="text" name="nom" th:field="*{paisSucursal}" class="form-control" placeholder="Introdueixi el pais de la sucursal: " required>
+                            <input type="text" name="nom" th:field="*{paisSucursal}" class="form-control" placeholder="Actualitzi el pais de la sucursal: ">
                         </div>
                         <br>
                         <div class="box-footer">
-                            <button class="btn btn-success">Registrar</button>
+                            <button class="btn btn-success">Actualitzar</button>
                         </div>
                     </form>
                 </div>
