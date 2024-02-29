@@ -16,7 +16,9 @@ public class SucursalService {
     private SucursalRepository sucursalRepository;
 
     private Sucursal convertToSucursal (SucursalDTO sucursalDTO){
-        return new Sucursal ();
+        Sucursal sucursal = new Sucursal(sucursalDTO.getNomSucursal(), sucursalDTO.getPaisSucursal());
+        sucursal.setId(sucursalDTO.getPk_SucursalID());
+        return sucursal;
     }
     private SucursalDTO convertToSucursalDTO (Sucursal sucursal){
         SucursalDTO sucursalDTO = null;
