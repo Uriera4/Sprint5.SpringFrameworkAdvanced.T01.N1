@@ -39,10 +39,7 @@ public class SucursalService {
         return convertToSucursalDTO(newSucursal);
     }
     public SucursalDTO updateSucursal (SucursalDTO sucursalDTO){
-        Sucursal newSucursal = new Sucursal();
-        newSucursal.setId(sucursalDTO.getPk_SucursalID());
-        newSucursal.setNomSucursal(sucursalDTO.getNomSucursal());
-        newSucursal.setPaisSucursal(sucursalDTO.getPaisSucursal());
+        Sucursal newSucursal = convertToSucursal(sucursalDTO);
         sucursalRepository.save(newSucursal);
         return convertToSucursalDTO(newSucursal);
     }
